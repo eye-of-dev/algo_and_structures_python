@@ -8,3 +8,23 @@
 то вводятся эти символы. Программа должна вывести на экран любой
 символ алфавита от 'a' до 'f' включительно.
 """
+
+from random import random
+
+print("Случайное целое число")
+NUMB_ONE = int(input("Введите первое число: "))
+NUMB_TWO = int(input("Введите второе число: "))
+NUMB_RAND = int(random() * (NUMB_TWO - NUMB_ONE + 1)) + NUMB_ONE
+print("Ваше случайное целое число: ", NUMB_RAND)
+
+print("Случайное вещественное число")
+NUMB_THREE = float(input("Введите первое число: "))
+NUMB_FOUR = float(input("Введите второе число: "))
+NUMB_RAND = random() * (NUMB_FOUR - NUMB_THREE) + NUMB_THREE
+print("Ваше случайное вещественное число: ", round(NUMB_RAND, 3))
+
+print("Случайный символ")
+CHAR_ONE = ord(input("Введите символ английского алфавита: "))
+CHAR_TWO = ord(input("Введите символ английского алфавита: "))
+CHAR_RAND = int(random() * (CHAR_TWO - CHAR_ONE + 1)) + CHAR_ONE
+print("Ваш случайный символ: ", chr(CHAR_RAND))
