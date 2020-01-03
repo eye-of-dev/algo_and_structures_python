@@ -5,3 +5,16 @@
 число, чем то, что загадано. Если за 10 попыток число не отгадано,
 то вывести загаданное число.
 """
+
+from random import randint
+
+NUMB_RAND = randint(1, 100)
+
+i = 1
+while i <= 10:
+    NUMB = int(input('Отгадай число: '))
+    if NUMB == NUMB_RAND:
+        print('Вы отгадали число за %s попытки(ок)' % i)
+        break
+    print('Осталось попыток %s' % (10 - i))
+    i = i + 1

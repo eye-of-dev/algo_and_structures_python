@@ -12,7 +12,15 @@
 
 
 def calculator(numb_one, numb_two, sing):
-    """ Функция калькулятора """
+    """
+    Функция калькулятора
+    Да, eval - это "плохо", но тут его легко контролировать,
+    да и решение выглядит изящным
+    :param numb_one: Первое число
+    :param numb_two: Второе число
+    :param sing: Знак операции
+    :return: Возвращает результат вычисления
+    """
     exp = numb_one + sing + numb_two
     return eval(exp)
 
@@ -28,6 +36,6 @@ while True:
 
         print(calculator(NUMB_ONE, NUMB_TWO, SIGN))
     except ArithmeticError:
-        print('Деление на 0 невозможно и/или другая неправильная операция')
+        print('Деление на 0 невозможно и/или другая "неправильная" операция')
     except KeyboardInterrupt:
         print('Закончена работа с калькулятором')

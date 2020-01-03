@@ -3,3 +3,12 @@
 натуральных чисел выполняется равенство: 1+2+...+n = n(n+1)/2,
  где n - любое натуральное число.
 """
+
+NUMB = int(input('Введите число: '))
+NUMB_S = 0
+for i in range(1, NUMB + 1):
+    NUMB_S += i
+
+NUMB_M = NUMB * (NUMB + 1) // 2
+print(NUMB_S)
+print(NUMB_M)
