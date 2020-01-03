@@ -9,3 +9,25 @@
 Также сообщать пользователю о невозможности деления на ноль,
 если он ввел 0 в качестве делителя.
 """
+
+
+def calculator(numb_one, numb_two, sing):
+    """ Функция калькулятора """
+    exp = numb_one + sing + numb_two
+    return eval(exp)
+
+
+while True:
+    try:
+        NUMB_ONE = input('Введите первое число: ')
+        NUMB_TWO = input('Введите второе число: ')
+        SIGN = input('Введете знак операции(+, -, *, /), любой '
+                     'другой символ или ноль выход из калькулятора: ')
+        if '+-*/'.find(SIGN) < 0:
+            break
+
+        print(calculator(NUMB_ONE, NUMB_TWO, SIGN))
+    except ArithmeticError:
+        print('Деление на 0 невозможно и/или другая неправильная операция')
+    except KeyboardInterrupt:
+        print('Закончена работа с калькулятором')
