@@ -5,3 +5,14 @@
 (или 0, 3, 4, 5 - если индексация начинается с нуля),
 т.к. именно в этих позициях первого массива стоят четные числа.
 """
+from random import randint
+
+IN_LIST = [randint(0, 10) for i in range(10)]
+EVEN_LIST = []
+
+for key, value in enumerate(IN_LIST):
+    if value % 2 == 0:
+        EVEN_LIST.append(key)
+
+print(f'Исходный массив {IN_LIST}')
+print(f'Ключи от четных элементов из исходного массива {EVEN_LIST}')
